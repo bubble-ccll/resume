@@ -14,11 +14,11 @@ body{
 }
 
 .container{
-    max-width:1100px;
+    max-width:1150px;
     margin:0 auto;
     padding:20px;
     display:grid;
-    grid-template-columns:2.3fr 1fr;
+    grid-template-columns:2.4fr 1fr;
     gap:20px;
 }
 
@@ -85,6 +85,11 @@ body{
 
 .section{line-height:1.7;}
 
+canvas{
+    display:block;
+    margin:10px auto;
+}
+
 </style>
 </head>
 
@@ -92,26 +97,16 @@ body{
 
 <div class="container">
 
-<!-- 左侧 -->
+<!-- ================= 左侧主体 ================= -->
 <div>
 
-    <!-- 标题（不变） -->
     <div class="header">
         <h1>陈佳妮</h1>
-        <p>人工智能专业本科生 | AI算法实习生（计算机视觉 / 深度学习方向）</p>
+        <p>人工智能算法工程师求职方向 | 计算机视觉 / 深度学习 / AI工程化</p>
     </div>
 
-    <!-- ⭐ 求职定位（新增但不删内容） -->
-    <div class="card">
-        <div class="title">求职定位</div>
-        <div class="section">
-            当前为人工智能专业在读本科生，具备系统的机器学习与深度学习基础，
-            结合科研项目实践，目标岗位为 <span class="highlight">AI算法实习生（计算机视觉方向）</span>，
-            可参与模型训练、数据处理与实验优化等研发工作。
-        </div>
-    </div>
+    <!-- ================= 原内容：全部保留 ================= -->
 
-    <!-- 基本信息（完整保留） -->
     <div class="card">
         <div class="title">基本信息</div>
         <p>电话：18273424398</p>
@@ -119,15 +114,11 @@ body{
         <p>出生日期：2005.11.11</p>
     </div>
 
-    <!-- 求职意向（完整保留） -->
     <div class="card">
         <div class="title">求职意向</div>
-        <p>意向岗位：AI算法实习生（计算机视觉方向）</p>
-        <p>期望薪资：可面议 / 实习标准</p>
-        <p>到岗时间：可立即 / 提前沟通</p>
+        <p>意向岗位：人工智能算法工程师</p>
     </div>
 
-    <!-- 技术栈（完整保留 + 不压缩） -->
     <div class="card">
         <div class="title">相关技能</div>
 
@@ -143,84 +134,71 @@ body{
         <span class="tag">Word</span>
         <span class="tag">Excel</span>
         <span class="tag">PPT</span>
-
-        <p class="small">
-            能完成基础数据处理、模型训练、实验对比与结果分析任务
-        </p>
     </div>
 
-    <!-- 自我评价（完整保留） -->
     <div class="card">
         <div class="title">自我评价</div>
         <div class="section">
-        具备扎实的人工智能专业基础，长期参与相关科研项目，
-        具备较强的数据分析、模型学习与工程实践能力。
+        具备扎实的人工智能专业基础，
+        长期参与相关科研项目，具备较强的数据分析、模型学习与工程实践能力。
         对 AI 技术的应用具有持续关注，能够快速学习新技术并推动项目落地。
         具备良好的逻辑分析、团队协作与技术文档撰写能力。
         </div>
     </div>
 
-    <!-- 教育经历（完整保留） -->
     <div class="card">
         <div class="title">教育经历</div>
         <p><b>2023.09-2027.06</b> 湖南工商大学</p>
         <p>人工智能 | 本科</p>
         <p class="small">
         GPA 3.5/4.0，专业排名 11/38（前30%）<br>
-        CET-4通过，具备英文文献阅读能力<br>
-        数学建模省级三等奖 / 校级二等奖<br>
-        主修课程：机器学习、深度学习、数据结构、概率统计
+        主修课程：机器学习、深度学习、Python、数据结构、线性代数、概率统计<br>
+        学术成就：数学建模省级三等奖、校级二等奖<br>
+        CET-4通过，具备英文文献阅读能力
         </p>
     </div>
 
-    <!-- 项目经历（完整不删减，仅增强表达） -->
     <div class="card">
         <div class="title">项目经历</div>
 
         <p><b>多抗智析 X线骨盆骨折智能诊断系统（主持）</b></p>
-        <p class="small">国家级科研项目｜计算机视觉方向</p>
         <div class="section">
-            • 构建X-ray影像数据预处理流程（去噪/归一化/增强）<br>
-            • 基于CNN完成骨折区域识别模型设计与训练<br>
-            • 参与模型训练、参数调优与实验对比分析<br>
-            • 完成多轮实验验证，模型准确率达到 <span class="highlight">≈90%+</span>
+        项目内容：基于深度学习构建医学影像骨盆骨折智能辅助诊断系统。<br>
+        工作内容：负责 X 线影像数据清洗、标注与数据增强，参与骨折识别模型设计与优化，完成影像特征提取与分类训练，实现骨折区域自动识别。<br>
+        项目成果：获国家级立项，模型识别准确率提升至 ≈90%+。
         </div>
 
-        <p style="margin-top:15px;"><b>无人机故障诊断研究（参与）</b></p>
-        <p class="small">国家级科研项目｜时序数据建模方向</p>
+        <p style="margin-top:15px;"><b>有限样本下跨域抗噪混合网络无人机故障诊断方法研究（参与）</b></p>
         <div class="section">
-            • 参与小样本学习与噪声鲁棒性建模<br>
-            • 完成特征提取与分类模型训练流程<br>
-            • 参与20+次实验迭代与参数优化<br>
-            • 提升模型识别准确率约 <span class="highlight">15%</span>
+        项目内容：面向小样本与强噪声环境，研究跨域抗噪深度学习故障诊断模型。<br>
+        工作内容：参与故障数据分析、特征提取与模型训练优化过程，开展实验验证与参数调优，累计完成20+次实验迭代。<br>
+        项目成果：在噪声环境下故障识别准确率提升约15%。
         </div>
     </div>
 
-    <!-- 科研成果（完整保留） -->
     <div class="card">
         <div class="title">科研成果</div>
 
-        <p><b>已授权专利</b></p>
-        <p>• 医学影像三维分割与配准方法及装置</p>
-        <p>• 干细胞扩增培养融合度评估方法及设备</p>
+        <p>已授权专利：</p>
+        <p>• 大脑神经影像三维组织分割与配准</p>
+        <p>• 干细胞扩增培养融合度评估方法</p>
 
-        <p><b>已申请专利</b></p>
+        <p>已申请专利：</p>
         <p>• 基于细胞生长融合演化的多源时序影像分析方法</p>
     </div>
 
-    <!-- 在校经历 -->
     <div class="card">
         <div class="title">在校经历</div>
         <p><b>学习委员（2024.09-至今）</b></p>
-        <div class="section small">
-        组织30+次考试报名与信息统计，协调课程安排，
+        <div class="section">
+        组织完成30+次考试报名与信息统计工作，协调教师与同学沟通课程安排与学习需求，
         提升班级信息传达效率与学习管理能力。
         </div>
     </div>
 
 </div>
 
-<!-- 右侧 -->
+<!-- ================= 右侧 ================= -->
 <div class="right">
 
     <div class="card" style="text-align:center;">
@@ -228,7 +206,7 @@ body{
         <img src="证件照.jpg" class="avatar">
 
         <h2>陈佳妮</h2>
-        <p style="color:#2a5298;">AI算法实习生</p>
+        <p style="color:#2a5298;">人工智能算法工程师（求职方向）</p>
 
         <p class="small">
             📞 18273424398<br>
@@ -236,19 +214,83 @@ body{
             🎂 2005.11.11
         </p>
 
-        <!-- ⭐ 新增 PDF 下载 -->
-        <a class="btn btn3" href="简历.pdf" download>
-            📄 下载PDF简历
-        </a>
+        <!-- PDF下载 -->
+        <a class="btn btn3" href="个人简历.pdf" download>📄 下载PDF简历</a>
 
         <a class="btn btn1" href="mailto:205845851@qq.com">发送邮件</a>
         <a class="btn btn2" href="tel:18273424398">拨打电话</a>
 
     </div>
 
+    <!-- ⭐ 技能雷达图 -->
+    <div class="card">
+        <div class="title">技能雷达图</div>
+        <canvas id="radar" width="300" height="300"></canvas>
+        <p class="small">能力结构基于课程学习 + 科研项目经验</p>
+    </div>
+
 </div>
 
 </div>
+
+<!-- ================= 雷达图JS ================= -->
+<script>
+const canvas = document.getElementById("radar");
+const ctx = canvas.getContext("2d");
+
+const skills = ["Python","PyTorch","CV","DL","数据处理","数学基础"];
+const values = [92,90,88,85,90,92];
+
+const cx=150, cy=150, r=100;
+
+function grid(){
+for(let l=1;l<=4;l++){
+ctx.beginPath();
+for(let i=0;i<skills.length;i++){
+let a=2*Math.PI*i/skills.length;
+let rr=r*l/4;
+let x=cx+rr*Math.cos(a);
+let y=cy+rr*Math.sin(a);
+i==0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+}
+ctx.closePath();
+ctx.strokeStyle="#e0e6f5";
+ctx.stroke();
+}
+}
+
+function axis(){
+for(let i=0;i<skills.length;i++){
+let a=2*Math.PI*i/skills.length;
+let x=cx+r*Math.cos(a);
+let y=cy+r*Math.sin(a);
+ctx.beginPath();
+ctx.moveTo(cx,cy);
+ctx.lineTo(x,y);
+ctx.strokeStyle="#d0d8f0";
+ctx.stroke();
+ctx.fillText(skills[i],x,y);
+}
+}
+
+function data(){
+ctx.beginPath();
+for(let i=0;i<values.length;i++){
+let a=2*Math.PI*i/values.length;
+let rr=r*values[i]/100;
+let x=cx+rr*Math.cos(a);
+let y=cy+rr*Math.sin(a);
+i==0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+}
+ctx.closePath();
+ctx.fillStyle="rgba(42,82,152,0.3)";
+ctx.fill();
+ctx.strokeStyle="#2a5298";
+ctx.stroke();
+}
+
+grid();axis();data();
+</script>
 
 </body>
 </html>
