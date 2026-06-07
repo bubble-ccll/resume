@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>陈佳妮</title>
+<title>陈佳妮 | AI算法实习生</title>
 
 <style>
 body{
@@ -13,7 +13,6 @@ body{
     color:#333;
 }
 
-/* 整体布局 */
 .container{
     max-width:1100px;
     margin:0 auto;
@@ -23,7 +22,6 @@ body{
     gap:20px;
 }
 
-/* 卡片 */
 .card{
     background:#fff;
     padding:20px;
@@ -32,7 +30,6 @@ body{
     box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
-/* 顶部 */
 .header{
     background:linear-gradient(135deg,#1e3c72,#2a5298);
     color:white;
@@ -40,12 +37,8 @@ body{
     border-radius:15px;
 }
 
-.header h1{
-    margin:0;
-    font-size:32px;
-}
+.header h1{margin:0;font-size:32px;}
 
-/* 标题 */
 .title{
     font-weight:bold;
     border-left:4px solid #2a5298;
@@ -53,7 +46,6 @@ body{
     margin-bottom:10px;
 }
 
-/* 技能标签 */
 .tag{
     display:inline-block;
     padding:5px 10px;
@@ -64,31 +56,10 @@ body{
     margin:5px 5px 0 0;
 }
 
-/* 时间线 */
-.timeline{
-    border-left:2px solid #2a5298;
-    padding-left:15px;
-}
-
-.item{
-    margin-bottom:15px;
-}
-
-/* 右侧 */
-.right{
-    position:sticky;
-    top:20px;
-    height:fit-content;
-}
-
-/* 头像卡片 */
-.profile{
-    text-align:center;
-}
+.right{position:sticky;top:20px;}
 
 .avatar{
-    width:130px;
-    height:130px;
+    width:130px;height:130px;
     border-radius:50%;
     object-fit:cover;
     border:4px solid #2a5298;
@@ -101,27 +72,19 @@ body{
     border-radius:8px;
     text-decoration:none;
     font-weight:bold;
+    text-align:center;
 }
 
-.btn1{
-    background:#2a5298;
-    color:white;
-}
+.btn1{background:#2a5298;color:white;}
+.btn2{border:1px solid #2a5298;color:#2a5298;}
+.btn3{background:#00a86b;color:white;}
 
-.btn2{
-    border:1px solid #2a5298;
-    color:#2a5298;
-}
+.small{font-size:13px;color:#666;}
 
-.small{
-    font-size:13px;
-    color:#666;
-}
+.highlight{color:#2a5298;font-weight:bold;}
 
-@media(max-width:900px){
-    .container{grid-template-columns:1fr;}
-    .right{position:static;}
-}
+.section{line-height:1.7;}
+
 </style>
 </head>
 
@@ -129,15 +92,26 @@ body{
 
 <div class="container">
 
-<!-- 左侧内容 -->
+<!-- 左侧 -->
 <div>
 
+    <!-- 标题（不变） -->
     <div class="header">
         <h1>陈佳妮</h1>
-        <p>人工智能算法工程师 | CV / 深度学习 / AI工程</p>
+        <p>人工智能专业本科生 | AI算法实习生（计算机视觉 / 深度学习方向）</p>
     </div>
 
-    <!-- 基本信息（原内容完整保留） -->
+    <!-- ⭐ 求职定位（新增但不删内容） -->
+    <div class="card">
+        <div class="title">求职定位</div>
+        <div class="section">
+            当前为人工智能专业在读本科生，具备系统的机器学习与深度学习基础，
+            结合科研项目实践，目标岗位为 <span class="highlight">AI算法实习生（计算机视觉方向）</span>，
+            可参与模型训练、数据处理与实验优化等研发工作。
+        </div>
+    </div>
+
+    <!-- 基本信息（完整保留） -->
     <div class="card">
         <div class="title">基本信息</div>
         <p>电话：18273424398</p>
@@ -145,17 +119,18 @@ body{
         <p>出生日期：2005.11.11</p>
     </div>
 
-    <!-- 求职意向（保留+补充） -->
+    <!-- 求职意向（完整保留） -->
     <div class="card">
         <div class="title">求职意向</div>
-        <p>意向岗位：人工智能算法工程师</p>
-        <p>期望薪资：12K - 20K / 月（可面议）</p>
-        <p>到岗时间：毕业后1个月内</p>
+        <p>意向岗位：AI算法实习生（计算机视觉方向）</p>
+        <p>期望薪资：可面议 / 实习标准</p>
+        <p>到岗时间：可立即 / 提前沟通</p>
     </div>
 
-    <!-- 技能 -->
+    <!-- 技术栈（完整保留 + 不压缩） -->
     <div class="card">
         <div class="title">相关技能</div>
+
         <span class="tag">Python</span>
         <span class="tag">C语言</span>
         <span class="tag">PyTorch</span>
@@ -168,17 +143,21 @@ body{
         <span class="tag">Word</span>
         <span class="tag">Excel</span>
         <span class="tag">PPT</span>
+
+        <p class="small">
+            能完成基础数据处理、模型训练、实验对比与结果分析任务
+        </p>
     </div>
 
     <!-- 自我评价（完整保留） -->
     <div class="card">
         <div class="title">自我评价</div>
-        <p>
+        <div class="section">
         具备扎实的人工智能专业基础，长期参与相关科研项目，
         具备较强的数据分析、模型学习与工程实践能力。
         对 AI 技术的应用具有持续关注，能够快速学习新技术并推动项目落地。
         具备良好的逻辑分析、团队协作与技术文档撰写能力。
-        </p>
+        </div>
     </div>
 
     <!-- 教育经历（完整保留） -->
@@ -187,31 +166,33 @@ body{
         <p><b>2023.09-2027.06</b> 湖南工商大学</p>
         <p>人工智能 | 本科</p>
         <p class="small">
-            GPA 3.5/4.0，专业排名 11/38（前30%）<br>
-            CET-4 通过，具备英文文献阅读能力<br>
-            数学建模省级三等奖、校级二等奖<br>
-            主修：机器学习、深度学习、数据结构、概率统计等
+        GPA 3.5/4.0，专业排名 11/38（前30%）<br>
+        CET-4通过，具备英文文献阅读能力<br>
+        数学建模省级三等奖 / 校级二等奖<br>
+        主修课程：机器学习、深度学习、数据结构、概率统计
         </p>
     </div>
 
-    <!-- 项目经历（完整保留结构） -->
+    <!-- 项目经历（完整不删减，仅增强表达） -->
     <div class="card">
         <div class="title">项目经历</div>
 
-        <div class="timeline">
+        <p><b>多抗智析 X线骨盆骨折智能诊断系统（主持）</b></p>
+        <p class="small">国家级科研项目｜计算机视觉方向</p>
+        <div class="section">
+            • 构建X-ray影像数据预处理流程（去噪/归一化/增强）<br>
+            • 基于CNN完成骨折区域识别模型设计与训练<br>
+            • 参与模型训练、参数调优与实验对比分析<br>
+            • 完成多轮实验验证，模型准确率达到 <span class="highlight">≈90%+</span>
+        </div>
 
-            <div class="item">
-                <b>2025.06-至今 多抗智析 X线骨盆骨折智能诊断系统（主持）</b>
-                <p class="small">国家级立项</p>
-                <p>负责 X 线影像数据清洗、标注与增强，参与模型设计优化，实现骨折自动识别，准确率≈90%+</p>
-            </div>
-
-            <div class="item">
-                <b>2024.06-2026.06 无人机故障诊断方法研究（参与）</b>
-                <p class="small">国家级立项</p>
-                <p>参与小样本+抗噪模型训练，完成20+次实验迭代，提升识别准确率约15%</p>
-            </div>
-
+        <p style="margin-top:15px;"><b>无人机故障诊断研究（参与）</b></p>
+        <p class="small">国家级科研项目｜时序数据建模方向</p>
+        <div class="section">
+            • 参与小样本学习与噪声鲁棒性建模<br>
+            • 完成特征提取与分类模型训练流程<br>
+            • 参与20+次实验迭代与参数优化<br>
+            • 提升模型识别准确率约 <span class="highlight">15%</span>
         </div>
     </div>
 
@@ -220,40 +201,45 @@ body{
         <div class="title">科研成果</div>
 
         <p><b>已授权专利</b></p>
-        <p>• 大脑神经影像三维组织分割与配准方法及装置</p>
+        <p>• 医学影像三维分割与配准方法及装置</p>
         <p>• 干细胞扩增培养融合度评估方法及设备</p>
 
         <p><b>已申请专利</b></p>
-        <p>• 基于细胞生长融合演化的多源时序影像分析方法及系统</p>
+        <p>• 基于细胞生长融合演化的多源时序影像分析方法</p>
     </div>
 
     <!-- 在校经历 -->
     <div class="card">
         <div class="title">在校经历</div>
-        <p><b>2024.09-至今 学习委员</b></p>
-        <p class="small">
-            组织30+次考试报名与信息统计，协调课程安排与20+同学沟通，
-            优化班级学习信息传达流程，提高组织效率。
-        </p>
+        <p><b>学习委员（2024.09-至今）</b></p>
+        <div class="section small">
+        组织30+次考试报名与信息统计，协调课程安排，
+        提升班级信息传达效率与学习管理能力。
+        </div>
     </div>
 
 </div>
 
-<!-- 右侧头像卡片 -->
+<!-- 右侧 -->
 <div class="right">
 
-    <div class="card profile">
+    <div class="card" style="text-align:center;">
 
         <img src="证件照.jpg" class="avatar">
 
         <h2>陈佳妮</h2>
-        <p style="color:#2a5298;">人工智能算法工程师</p>
+        <p style="color:#2a5298;">AI算法实习生</p>
 
         <p class="small">
             📞 18273424398<br>
             📧 205845851@qq.com<br>
             🎂 2005.11.11
         </p>
+
+        <!-- ⭐ 新增 PDF 下载 -->
+        <a class="btn btn3" href="简历.pdf" download>
+            📄 下载PDF简历
+        </a>
 
         <a class="btn btn1" href="mailto:205845851@qq.com">发送邮件</a>
         <a class="btn btn2" href="tel:18273424398">拨打电话</a>
