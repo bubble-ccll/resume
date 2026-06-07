@@ -89,22 +89,101 @@ canvas{
     display:block;
     margin:10px auto;
 }
+<style>
+body{
+    margin:0;
+    font-family:"Microsoft YaHei";
+    background:#f5f7fb;
+    color:#333;
+}
 
-/* ===================== ⭐ 手机端适配（关键修复） ===================== */
+.container{
+    max-width:1150px;
+    margin:0 auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:3fr 1fr;
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    margin-top:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.header{
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+    color:white;
+    padding:35px;
+    border-radius:15px;
+}
+
+.header h1{margin:0;font-size:32px;}
+
+.title{
+    font-weight:bold;
+    border-left:4px solid #2a5298;
+    padding-left:10px;
+    margin-bottom:10px;
+}
+
+.tag{
+    display:inline-block;
+    padding:5px 10px;
+    background:#eef3ff;
+    color:#2a5298;
+    border-radius:20px;
+    font-size:13px;
+    margin:5px 5px 0 0;
+}
+
+.right{position:sticky;top:20px;}
+
+.avatar{
+    width:130px;height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #2a5298;
+}
+
+.btn{
+    display:block;
+    margin-top:10px;
+    padding:10px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    text-align:center;
+}
+
+.btn1{background:#2a5298;color:white;}
+.btn2{border:1px solid #2a5298;color:#2a5298;}
+.btn3{background:#00a86b;color:white;}
+
+.small{font-size:13px;color:#666;}
+
+.section{line-height:1.7;}
+
+canvas{
+    display:block;
+    margin:10px auto;
+}
+
+/* ⭐⭐⭐ 手机适配（正确写法）⭐⭐⭐ */
 @media (max-width: 768px) {
 
     .container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;  /* 关键：单列 */
         padding: 12px;
         gap: 12px;
     }
 
     .right {
         position: static;
-    }
-
-    .card {
-        margin-top: 12px;
+        order: -1;
     }
 
     .header {
@@ -130,7 +209,6 @@ canvas{
         padding: 12px;
     }
 }
-
 </style>
 </head>
 
@@ -146,6 +224,8 @@ canvas{
         <p>人工智能算法工程师求职方向 | 计算机视觉 / 深度学习 / AI工程化</p>
     </div>
 
+    <!-- ================= 原内容：全部保留 ================= -->
+
     <div class="card">
         <div class="title">基本信息</div>
         <p>电话：18273424398</p>
@@ -155,15 +235,21 @@ canvas{
     
     <div class="card">
         <div class="title">求职信息</div>
+
         <p>意向岗位：人工智能算法工程师、计算机视觉方向等</p>
+
         <p>期望薪资：10K - 20K / 月（实习可面议）</p>
+
         <p>意向城市：长沙 / 上海 / 杭州 / 深圳</p>
+
         <p>到岗时间：可立即到岗 / 提前1个月协调</p>
+
         <p>实习周期：≥3个月（可长期）</p>
     </div>
     
     <div class="card">
         <div class="title">相关技能</div>
+
         <span class="tag">Python</span>
         <span class="tag">C语言</span>
         <span class="tag">PyTorch</span>
@@ -181,8 +267,10 @@ canvas{
     <div class="card">
         <div class="title">自我评价</div>
         <div class="section">
-        具备扎实的人工智能专业基础，长期参与科研项目，具备较强的数据分析、模型学习与工程实践能力。
-        对 AI 技术持续关注，能够快速学习新技术并推动项目落地。
+        具备扎实的人工智能专业基础，
+        长期参与相关科研项目，具备较强的数据分析、模型学习与工程实践能力。
+        对 AI 技术的应用具有持续关注，能够快速学习新技术并推动项目落地。
+        具备良好的逻辑分析、团队协作与技术文档撰写能力。
         </div>
     </div>
 
@@ -191,9 +279,10 @@ canvas{
         <p><b>2023.09-2027.06</b> 湖南工商大学</p>
         <p>人工智能 | 本科</p>
         <p class="small">
-        GPA 3.5/4.0，专业排名 11/38<br>
-        数学建模省三等奖、校二等奖<br>
-        CET-4通过
+        GPA 3.5/4.0，专业排名 11/38（前30%）<br>
+        主修课程：机器学习、深度学习、Python、数据结构、线性代数、概率统计<br>
+        学术成就：数学建模省级三等奖、校级二等奖<br>
+        CET-4通过，具备英文文献阅读能力
         </p>
     </div>
 
@@ -202,26 +291,36 @@ canvas{
 
         <p><b>多抗智析 X线骨盆骨折智能诊断系统（主持）</b></p>
         <div class="section">
-        基于深度学习构建医学影像诊断系统，实现骨折区域自动识别，准确率≈90%+。
+        项目内容：基于深度学习构建医学影像骨盆骨折智能辅助诊断系统。<br>
+        工作内容：负责 X 线影像数据清洗、标注与数据增强，参与骨折识别模型设计与优化，完成影像特征提取与分类训练，实现骨折区域自动识别。<br>
+        项目成果：获国家级立项，模型识别准确率提升至 ≈90%+。
         </div>
 
-        <p style="margin-top:15px;"><b>无人机故障诊断（参与）</b></p>
+        <p style="margin-top:15px;"><b>有限样本下跨域抗噪混合网络无人机故障诊断方法研究（参与）</b></p>
         <div class="section">
-        小样本抗噪模型研究，识别准确率提升约15%。
+        项目内容：面向小样本与强噪声环境，研究跨域抗噪深度学习故障诊断模型。<br>
+        工作内容：参与故障数据分析、特征提取与模型训练优化过程，开展实验验证与参数调优，累计完成20+次实验迭代。<br>
+        项目成果：在噪声环境下故障识别准确率提升约15%。
         </div>
     </div>
 
     <div class="card">
         <div class="title">科研成果</div>
-        <p>已授权专利：神经影像分割、干细胞融合评估</p>
-        <p>已申请专利：多源时序影像分析方法</p>
+
+        <p>已授权专利：</p>
+        <p>• 大脑神经影像三维组织分割与配准</p>
+        <p>• 干细胞扩增培养融合度评估方法</p>
+
+        <p>已申请专利：</p>
+        <p>• 基于细胞生长融合演化的多源时序影像分析方法</p>
     </div>
 
     <div class="card">
         <div class="title">在校经历</div>
-        <p><b>学习委员</b>（2024-至今）</p>
+        <p><b>学习委员（2024.09-至今）</b></p>
         <div class="section">
-        负责班级信息管理与考试组织，沟通教师与同学。
+        组织完成30+次考试报名与信息统计工作，协调教师与同学沟通课程安排与学习需求，
+        提升班级信息传达效率与学习管理能力。
         </div>
     </div>
 
@@ -241,37 +340,42 @@ canvas{
             📞 18273424398<br>
             📧 205845851@qq.com<br>
             🎂 2005.11.11<br>
-            📍 长沙<br>
-            🎓 本科在读
+            📍 所在城市：长沙<br>
+            🎓 本科在读（人工智能专业）<br>
+            🚀 到岗：可立即 / 可协商<br>
+            💰 期望：10K-20K/月（实习可谈）
         </p>
 
-        <a class="btn btn3" href="简历.pdf" download>📄 下载PDF</a>
+        <!-- PDF下载 -->
+        <a class="btn btn3" href="简历.pdf" download>📄 下载PDF简历</a>
+
         <a class="btn btn1" href="mailto:205845851@qq.com">发送邮件</a>
         <a class="btn btn2" href="tel:18273424398">拨打电话</a>
 
     </div>
 
+    <!-- ⭐ 技能雷达图 -->
     <div class="card">
         <div class="title">技能雷达图</div>
         <canvas id="radar" width="300" height="300"></canvas>
+        <p class="small">能力结构基于课程学习 + 科研项目经验</p>
     </div>
 
 </div>
 
 </div>
 
+<!-- ================= 雷达图JS ================= -->
 <script>
 const canvas = document.getElementById("radar");
 const ctx = canvas.getContext("2d");
 
-const skills = ["Python","PyTorch","CV","DL","数据","数学"];
+const skills = ["Python","PyTorch","CV","DL","数据处理","数学基础"];
 const values = [92,87,88,85,92,95];
 
 const cx=150, cy=150, r=100;
 
-function draw(){
-ctx.clearRect(0,0,300,300);
-
+function grid(){
 for(let l=1;l<=4;l++){
 ctx.beginPath();
 for(let i=0;i<skills.length;i++){
@@ -285,10 +389,26 @@ ctx.closePath();
 ctx.strokeStyle="#e0e6f5";
 ctx.stroke();
 }
+}
 
+function axis(){
+for(let i=0;i<skills.length;i++){
+let a=2*Math.PI*i/skills.length;
+let x=cx+r*Math.cos(a);
+let y=cy+r*Math.sin(a);
+ctx.beginPath();
+ctx.moveTo(cx,cy);
+ctx.lineTo(x,y);
+ctx.strokeStyle="#d0d8f0";
+ctx.stroke();
+ctx.fillText(skills[i],x,y);
+}
+}
+
+function data(){
 ctx.beginPath();
 for(let i=0;i<values.length;i++){
-let a=2*Math.PI*i/skills.length;
+let a=2*Math.PI*i/values.length;
 let rr=r*values[i]/100;
 let x=cx+rr*Math.cos(a);
 let y=cy+rr*Math.sin(a);
@@ -301,7 +421,7 @@ ctx.strokeStyle="#2a5298";
 ctx.stroke();
 }
 
-draw();
+grid();axis();data();
 </script>
 
 </body>
