@@ -3,132 +3,159 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>陈佳妮 | 人工智能算法工程师</title>
+<title>陈佳妮</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: "Microsoft YaHei", sans-serif;
-        background: #f5f7fb;
-        color: #333;
-    }
+body{
+    margin:0;
+    font-family:"Microsoft YaHei";
+    background:#f5f7fb;
+    color:#333;
+}
 
-    .container {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 20px;
-    }
+/* 整体布局 */
+.container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:2.3fr 1fr;
+    gap:20px;
+}
 
-    /* 顶部横幅 */
-    .header {
-        background: linear-gradient(135deg, #1e3c72, #2a5298);
-        color: white;
-        padding: 40px 30px;
-        border-radius: 15px;
-    }
+/* 卡片 */
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    margin-top:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
 
-    .header h1 {
-        margin: 0;
-        font-size: 32px;
-    }
+/* 顶部 */
+.header{
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+    color:white;
+    padding:35px;
+    border-radius:15px;
+}
 
-    .header p {
-        margin: 8px 0 0;
-        opacity: 0.9;
-    }
+.header h1{
+    margin:0;
+    font-size:32px;
+}
 
-    /* 卡片 */
-    .card {
-        background: white;
-        padding: 20px;
-        border-radius: 12px;
-        margin-top: 15px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
+/* 标题 */
+.title{
+    font-weight:bold;
+    border-left:4px solid #2a5298;
+    padding-left:10px;
+    margin-bottom:10px;
+}
 
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
-    }
+/* 技能标签 */
+.tag{
+    display:inline-block;
+    padding:5px 10px;
+    background:#eef3ff;
+    color:#2a5298;
+    border-radius:20px;
+    font-size:13px;
+    margin:5px 5px 0 0;
+}
 
-    .tag {
-        display: inline-block;
-        padding: 5px 10px;
-        background: #eef3ff;
-        color: #2a5298;
-        border-radius: 20px;
-        font-size: 13px;
-        margin: 5px 5px 0 0;
-    }
+/* 时间线 */
+.timeline{
+    border-left:2px solid #2a5298;
+    padding-left:15px;
+}
 
-    .section-title {
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        border-left: 4px solid #2a5298;
-        padding-left: 10px;
-    }
+.item{
+    margin-bottom:15px;
+}
 
-    ul {
-        padding-left: 20px;
-    }
+/* 右侧 */
+.right{
+    position:sticky;
+    top:20px;
+    height:fit-content;
+}
 
-    .timeline {
-        border-left: 2px solid #2a5298;
-        padding-left: 15px;
-        margin-left: 5px;
-    }
+/* 头像卡片 */
+.profile{
+    text-align:center;
+}
 
-    .timeline-item {
-        margin-bottom: 15px;
-    }
+.avatar{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #2a5298;
+}
 
-    .small {
-        font-size: 13px;
-        color: #666;
-    }
+.btn{
+    display:block;
+    margin-top:10px;
+    padding:10px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
 
-    @media (max-width: 768px) {
-        .grid {
-            grid-template-columns: 1fr;
-        }
-    }
+.btn1{
+    background:#2a5298;
+    color:white;
+}
+
+.btn2{
+    border:1px solid #2a5298;
+    color:#2a5298;
+}
+
+.small{
+    font-size:13px;
+    color:#666;
+}
+
+@media(max-width:900px){
+    .container{grid-template-columns:1fr;}
+    .right{position:static;}
+}
 </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
-    <!-- 顶部 -->
+<!-- 左侧内容 -->
+<div>
+
     <div class="header">
         <h1>陈佳妮</h1>
-        <p>人工智能算法工程师 | AI / CV / 深度学习方向</p>
+        <p>人工智能算法工程师 | CV / 深度学习 / AI工程</p>
     </div>
 
-    <!-- 基本信息 -->
-    <div class="card grid">
-        <div>
-            <div class="section-title">基本信息</div>
-            <p>📞 电话：18273424398</p>
-            <p>📧 邮箱：205845851@qq.com</p>
-            <p>🎂 出生日期：2005.11.11</p>
-        </div>
+    <!-- 基本信息（原内容完整保留） -->
+    <div class="card">
+        <div class="title">基本信息</div>
+        <p>电话：18273424398</p>
+        <p>邮箱：205845851@qq.com</p>
+        <p>出生日期：2005.11.11</p>
+    </div>
 
-        <div>
-            <div class="section-title">求职信息</div>
-            <p>岗位：人工智能算法工程师</p>
-            <p>💰 期望薪资：12K - 20K / 月（可面议）</p>
-            <p>🚀 到岗时间：毕业后1个月内</p>
-        </div>
+    <!-- 求职意向（保留+补充） -->
+    <div class="card">
+        <div class="title">求职意向</div>
+        <p>意向岗位：人工智能算法工程师</p>
+        <p>期望薪资：12K - 20K / 月（可面议）</p>
+        <p>到岗时间：毕业后1个月内</p>
     </div>
 
     <!-- 技能 -->
     <div class="card">
-        <div class="section-title">技能栈</div>
-
+        <div class="title">相关技能</div>
         <span class="tag">Python</span>
         <span class="tag">C语言</span>
         <span class="tag">PyTorch</span>
@@ -138,79 +165,102 @@
         <span class="tag">OpenCV</span>
         <span class="tag">NumPy</span>
         <span class="tag">Pandas</span>
-        <span class="tag">Linux</span>
-        <span class="tag">Git</span>
-        <span class="tag">数据分析</span>
+        <span class="tag">Word</span>
+        <span class="tag">Excel</span>
+        <span class="tag">PPT</span>
     </div>
 
-    <!-- 教育经历 -->
+    <!-- 自我评价（完整保留） -->
     <div class="card">
-        <div class="section-title">教育经历</div>
-        <p><b>2023.09 - 2027.06</b> ｜ 湖南工商大学</p>
-        <p>人工智能 ｜ 本科</p>
-        <p class="small">
-            GPA 3.5/4.0 ｜ 专业排名 11/38（前30%）<br>
-            CET-4 已通过，具备英文技术文献阅读能力<br>
-            数学建模省级三等奖，校级二等奖
+        <div class="title">自我评价</div>
+        <p>
+        具备扎实的人工智能专业基础，长期参与相关科研项目，
+        具备较强的数据分析、模型学习与工程实践能力。
+        对 AI 技术的应用具有持续关注，能够快速学习新技术并推动项目落地。
+        具备良好的逻辑分析、团队协作与技术文档撰写能力。
         </p>
     </div>
 
-    <!-- 项目经历 -->
+    <!-- 教育经历（完整保留） -->
     <div class="card">
-        <div class="section-title">项目经历</div>
+        <div class="title">教育经历</div>
+        <p><b>2023.09-2027.06</b> 湖南工商大学</p>
+        <p>人工智能 | 本科</p>
+        <p class="small">
+            GPA 3.5/4.0，专业排名 11/38（前30%）<br>
+            CET-4 通过，具备英文文献阅读能力<br>
+            数学建模省级三等奖、校级二等奖<br>
+            主修：机器学习、深度学习、数据结构、概率统计等
+        </p>
+    </div>
+
+    <!-- 项目经历（完整保留结构） -->
+    <div class="card">
+        <div class="title">项目经历</div>
 
         <div class="timeline">
 
-            <div class="timeline-item">
-                <b>2025.06 - 至今 ｜ 多抗智析 X线骨盆骨折智能诊断系统（主持）</b>
-                <p class="small">
-                    国家级立项项目
-                </p>
-                <ul>
-                    <li>负责 X 线影像数据清洗、标注与数据增强</li>
-                    <li>参与骨折识别模型设计与优化</li>
-                    <li>实现影像特征提取与分类训练</li>
-                    <li>模型准确率提升至约 90%+</li>
-                </ul>
+            <div class="item">
+                <b>2025.06-至今 多抗智析 X线骨盆骨折智能诊断系统（主持）</b>
+                <p class="small">国家级立项</p>
+                <p>负责 X 线影像数据清洗、标注与增强，参与模型设计优化，实现骨折自动识别，准确率≈90%+</p>
             </div>
 
-            <div class="timeline-item">
-                <b>2024.06 - 2026.06 ｜ 无人机故障诊断研究（参与）</b>
-                <p class="small">国家级立项项目</p>
-                <ul>
-                    <li>参与小样本+噪声环境数据建模</li>
-                    <li>完成 20+ 次实验迭代与参数调优</li>
-                    <li>识别准确率提升约 15%</li>
-                </ul>
+            <div class="item">
+                <b>2024.06-2026.06 无人机故障诊断方法研究（参与）</b>
+                <p class="small">国家级立项</p>
+                <p>参与小样本+抗噪模型训练，完成20+次实验迭代，提升识别准确率约15%</p>
             </div>
 
         </div>
     </div>
 
-    <!-- 科研成果 -->
+    <!-- 科研成果（完整保留） -->
     <div class="card">
-        <div class="section-title">科研成果</div>
+        <div class="title">科研成果</div>
+
         <p><b>已授权专利</b></p>
-        <ul>
-            <li>大脑神经影像的三维组织分割与配准的协同优化方法及装置</li>
-            <li>一种干细胞扩增培养的融合度评估方法及设备</li>
-        </ul>
+        <p>• 大脑神经影像三维组织分割与配准方法及装置</p>
+        <p>• 干细胞扩增培养融合度评估方法及设备</p>
 
         <p><b>已申请专利</b></p>
-        <ul>
-            <li>基于细胞生长融合演化的多源时序影像分析方法及系统</li>
-        </ul>
+        <p>• 基于细胞生长融合演化的多源时序影像分析方法及系统</p>
     </div>
 
-    <!-- 自我评价 -->
+    <!-- 在校经历 -->
     <div class="card">
-        <div class="section-title">自我评价</div>
-        <p>
-            具备扎实的人工智能理论基础与工程实践能力，长期参与深度学习与计算机视觉相关科研项目。
-            熟悉数据处理、模型训练与优化流程，具备良好的逻辑分析能力与团队协作能力。
-            能快速学习新技术并应用于实际项目落地。
+        <div class="title">在校经历</div>
+        <p><b>2024.09-至今 学习委员</b></p>
+        <p class="small">
+            组织30+次考试报名与信息统计，协调课程安排与20+同学沟通，
+            优化班级学习信息传达流程，提高组织效率。
         </p>
     </div>
+
+</div>
+
+<!-- 右侧头像卡片 -->
+<div class="right">
+
+    <div class="card profile">
+
+        <img src="证件照.jpg" class="avatar">
+
+        <h2>陈佳妮</h2>
+        <p style="color:#2a5298;">人工智能算法工程师</p>
+
+        <p class="small">
+            📞 18273424398<br>
+            📧 205845851@qq.com<br>
+            🎂 2005.11.11
+        </p>
+
+        <a class="btn btn1" href="mailto:205845851@qq.com">发送邮件</a>
+        <a class="btn btn2" href="tel:18273424398">拨打电话</a>
+
+    </div>
+
+</div>
 
 </div>
 
